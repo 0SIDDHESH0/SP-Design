@@ -1,0 +1,111 @@
+/* Main About Seciton Start */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: black;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: deeppink; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+main{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+}
+.main-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-img img{
+    height: 50%; width: 50%;
+}
+.about-sec{
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-weight: 600;
+    font-size: x-large;
+    margin-bottom: 7vh;
+    color: deeppink;
+}
+.about-info{
+    width: 70%; word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 7vh;
+    color: #fff;
+}
+.service-info{
+    width: 30%; text-align: center;
+    margin-bottom: 7vh; display: flex;
+    gap: 10px; flex-direction: column;
+    font-size: larger; font-weight: 400;
+    list-style-type: disc; color: #fff;
+}
+@media screen and (max-width: 480px){
+    .about-sec{
+        letter-spacing: 2px;
+        word-spacing: 4px;
+        font-weight: 600;
+        font-size: medium;
+        margin-bottom: 5vh;
+    }
+    .about-info{
+        width: 90%; word-spacing: 2px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: smaller;
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+    .service-info{
+        width: 80%; text-align: center;
+        margin-bottom: 5vh;
+        font-size: smaller; font-weight: 400;
+    }
+}
+/* Main About Section End */
+footer{
+    border-top: 1px solid rgb(200, 200, 200);
+}
+/* <div class="main-img"><img src="Images/SP Design Logo.webp" alt="Logo" height="500px" width="500px"></div>
+      <div class="main-txt">ABOUT US</div>
+      <div class="main-subtxt">We have started our retouching studio. A professional high-end retoucher team based in India. SP Design is professional Adobe Photoshop experience introduced to the world of fashion and led Advertising Agency. SP Designs has a keen eye for lighting, composition, color balance and a great attention to detail, which shows in our work. Able to see what an image needs to be greatly improved, but also ready to follow guidelines.</div>
+      <div class="main-subtxt2">Services</div>
+      <ul class="main-subtxt3">
+        <li>High End Retouching</li>
+        <li>Jwellery Retouching</li>
+        <li>Fashion & Beauty Retouching <br> With Perfect But Natural Skin</li>
+        <li>Color Corrections</li>
+        <li>AD Campaign</li>
+        <li>Cataloge Design</li>
+        <li>Brochure  Design</li>
+        <li>E-Commerce AD Design</li>
+        <li>Wedding Albums <br> Deisgn & Photography</li>
+        <li>Products Retouching</li>
+        <li>Restorations</li>
+        <li>Photo Manipulation, <br> Using Non-Destructive Techniques</li>
+      </ul>
+      <div class="main-subtxt" style="margin-bottom: 10px;">For a client base that includes commercial, editorial and advertising clients. Happy to work with you.</div>
+      <div class="main-subtxt">SP Designs has more than 10 years experience in the industry and in that time, spdesignretouching has established a reputation for thier professional approach, creativity and flawless execution.</div> */

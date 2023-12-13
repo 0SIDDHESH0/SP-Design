@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SP Design | High End Retouching</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css" integrity="sha512-vgK7iuWG4Uq4GJHovntONntOoSduelAYImQTT3f0mvdUcI95qQgSmf4ldDhn/FNl3g/xouqOtsm/NxFqaTnxbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="gallery.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+<script>
+function initComparisons() {
+  var x, i;
+  /*find all elements with an "overlay" class:*/
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /*once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function:*/
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /*get the width and height of the img element*/
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /*set the width of the img element to 50%:*/
+    img.style.width = (w / 2) + "px";
+    /*create slider:*/
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /*insert slider*/
+    img.parentElement.insertBefore(slider, img);
+    /*position the slider in the middle:*/
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /*execute a function when the mouse button is pressed:*/
+    slider.addEventListener("mousedown", slideReady);
+    /*and another function when the mouse button is released:*/
+    window.addEventListener("mouseup", slideFinish);
+    /*or touched (for touch screens:*/
+    slider.addEventListener("touchstart", slideReady);
+    /*and released (for touch screens:*/
+    window.addEventListener("touchend", slideFinish);
+    function slideReady(e) {
+      /*prevent any other actions that may occur when moving over the image:*/
+      e.preventDefault();
+      /*the slider is now clicked and ready to move:*/
+      clicked = 1;
+      /*execute a function when the slider is moved:*/
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /*the slider is no longer clicked:*/
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /*if the slider is no longer clicked, exit this function:*/
+      if (clicked == 0) return false;
+      /*get the cursor's x position:*/
+      pos = getCursorPos(e)
+      /*prevent the slider from being positioned outside the image:*/
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /*execute a function that will resize the overlay image according to the cursor:*/
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = (e.changedTouches) ? e.changedTouches[0] : e;
+      /*get the x positions of the image:*/
+      a = img.getBoundingClientRect();
+      /*calculate the cursor's x coordinate, relative to the image:*/
+      x = e.pageX - a.left;
+      /*consider any page scrolling:*/
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /*resize the image:*/
+      img.style.width = x + "px";
+      /*position the slider:*/
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+</head>
+<body>
+<main>
+    <nav id="navbar">
+        <div class="nav-logo">
+            SP Design
+        </div>
+        <div class="nav-list">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-mob-list">
+            <ul class="nav-mob-links">
+                <div class="nav-mob-closeicon">
+                    <a onclick="hideBar()"><i class="ri-close-line"></i></a>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-mob-icon">
+            <a onclick="navBar()"><i class="ri-menu-3-line"></i></a>
+        </div>
+    </nav>
+    <main>
+      <div class="main-gallery">
+        <ul class="img1-section">
+          <li><img src="Images/img1 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img2 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img3 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img4 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img5 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img6 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img7 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img8 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img9 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img10 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img1 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img2 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img3 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img4 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img5 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img6 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img7 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img8 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img9 gal.webp" alt="" width="100%" height="100%"></li>
+          <li><img src="Images/img10 gal.webp" alt="" width="100%" height="100%"></li>
+        </ul>
+        <div class="img2-section">
+          <div class="img-comp-container">
+            <div class="img-comp-img">
+              <img src="Images/img2.jpg" width="860" height="565">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+              <img src="Images/img1.jpg" width="860"  height="565">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+      <div class="row">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      
+      <div class="row">
+      <ul>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Career</a></li>
+      </ul>
+      </div>
+      
+      <div class="row">
+      SP Design Copyright © 2024 - All rights reserved || Designed By: SP Design 
+      </div>
+      </div>
+      </footer>
+<script>
+initComparisons();
+</script>
+
+</body>
+</html>

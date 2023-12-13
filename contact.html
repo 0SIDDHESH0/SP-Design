@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhesh Webpage</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css" integrity="sha512-vgK7iuWG4Uq4GJHovntONntOoSduelAYImQTT3f0mvdUcI95qQgSmf4ldDhn/FNl3g/xouqOtsm/NxFqaTnxbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css" integrity="sha512-GL7EM8Lf8kU23I3kTio2kRWt8YRDVIQcSZjRVtVRfk05kB/QvkyafuTC94Ev0X6qk7Z0r5s06c1lsP1p/ezDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css" integrity="sha512-GL7EM8Lf8kU23I3kTio2kRWt8YRDVIQcSZjRVtVRfk05kB/QvkyafuTC94Ev0X6qk7Z0r5s06c1lsP1p/ezDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-logo">
+            SP Design
+        </div>
+        <div class="nav-list">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="clients.html">Clients</a></li>
+            </ul>
+        </div>
+        <div class="nav-mob-list">
+            <ul class="nav-mob-links">
+                <div class="nav-mob-closeicon">
+                    <a onclick="hideBar()"><i class="ri-close-line"></i></a>
+                </div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="clients.html">Clients</a></li>
+            </ul>
+        </div>
+        <div class="nav-mob-icon">
+            <a onclick="navBar()"><i class="ri-menu-3-line"></i></a>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <div class="mx-auto max-w-7xl px-4">
+              <div class="flex flex-col space-y-8 pb-10 pt-12 md:pt-24">
+                <div class="mx-auto max-w-max rounded-full border bg-gray-50 p-1 px-3" id="bck-share-thgts">
+                  <p id="share-thgts" class="text-black text-center text-xs font-semibold leading-normal md:text-sm">
+                    Share your thoughts
+                  </p>
+                </div>
+                <p class="text-center text-3xl font-bold text-gray-900 md:text-5xl md:leading-10">
+                  Love to hear from you
+                </p>
+                <p class="mx-auto max-w-4xl text-center text-base text-gray-600 md:text-xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                  veritatis voluptates neque itaque repudiandae sint, explicabo assumenda
+                  quam ratione placeat?
+                </p>
+              </div>
+              <div class="mx-auto max-w-7xl py-12 md:py-24" id="contact-form">
+                <div class="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
+                  <div class="flex items-center justify-center">
+                    <div class="px-2 md:px-12">
+                      <p class="text-2xl font-bold text-gray-900 md:text-4xl">
+                        Get in touch
+                      </p>
+                      <p class="mt-4 text-lg text-gray-600">
+                        Our friendly team would love to hear from you.
+                      </p>
+                      <form action="https://formspree.io/f/maygrbzw"
+                      method="POST" onsubmit="reset();" 
+                     class="mt-8 space-y-4">
+                        <div class="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
+                          <div class="grid w-full  items-center gap-1.5">
+                            <label
+                              class="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                              for="first_name"
+                            >
+                              First Name
+                            </label>
+                            <input
+                              class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                              type="text"
+                              id="first_name" name="fname"
+                              placeholder="First Name" required
+                            />
+                          </div>
+                          <div class="grid w-full  items-center gap-1.5">
+                            <label
+                              class="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                              for="last_name" 
+                            >
+                              Last Name
+                            </label>
+                            <input
+                              class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                              type="text"
+                              id="last_name"
+                              placeholder="Last Name" required
+                            />
+                          </div>
+                        </div>
+                        <div class="grid w-full  items-center gap-1.5">
+                          <label
+                            class="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            for="email"
+                          >
+                            Email
+                          </label>
+                          <input
+                            class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                            type="email"
+                            id="email" name="email"
+                            placeholder="Email" required
+                          />
+                        </div>
+                        <div class="grid w-full  items-center gap-1.5">
+                          <label
+                            class="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            for="phone_number" 
+                          >
+                            Phone number
+                          </label>
+                          <input
+                            class="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                            type="tel"
+                            id="phone_number" name="phone_number"
+                            placeholder="Phone number" required
+                          />
+                        </div>
+                        <div class="grid w-full  items-center gap-1.5">
+                          <label
+                            class="text-sm font-medium leading-none text-white peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            for="message"
+                          >
+                            Message
+                          </label>
+                          <textarea
+                            class="clr-white flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                            id="message" name="message"
+                            placeholder="Leave us a message"
+                            cols="3"
+                          ></textarea>
+                        </div>
+                        <button
+                          type="submit" id="send-msg"
+                          class="w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                        >
+                          Send Message
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- <img
+                    alt="Contact us"
+                    class="hidden max-h-full w-full rounded-lg object-cover lg:block"
+                    src="https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=687&amp;h=800&amp;q=80"
+                  /> -->
+                  <iframe class="hidden max-h-full w-full rounded-lg object-cover lg:block" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d597.4254937949995!2d72.88031505676031!3d19.172130906496545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b79eb1b0b833%3A0xa6ec3e8b86b55cb7!2s63-B%2C%20NNP%20Colony%2C%20Nagri%20Niwara%20Cooperative%20Housing%20Society%2C%20Goregaon%2C%20Mumbai%2C%20Maharashtra%20400065%2C%20India!5e1!3m2!1sen!2sus!4v1702089651357!5m2!1sen!2sus" width="500" height="680" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+            <hr class="mt-6" />
+          </div>
+    </main>
+    <footer>
+      <div class="footer">
+      <div class="row">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      
+      <div class="row">
+      <ul>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Career</a></li>
+      </ul>
+      </div>
+      
+      <div class="row">
+      SP Design Copyright © 2024 - All rights reserved || Designed By: SP Design 
+      </div>
+      </div>
+      </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* Main Contact Seciton Start */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background: black;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: black;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: deeppink; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+#first_name, #last_name,#email,#phone_number,#message{
+    color: #fff!important;
+}
+main{
+    margin-top: 10vh;
+    background-color: #000;
+}
+.clr{
+    color: deeppink!important;
+}
+p{
+    color: #fff!important;
+}
+.main-contact-txt{
+    font-size: x-large;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-weight: 400;
+    color: #fff;
+}
+.main-contact-form{
+    border: 10px solid red;
+    height: 90vh; width: 70vw;
+    color: #fff;
+}
+#send-msg{
+    background-color: deeppink;
+}
+#share-thgts{
+    color: #000!important;
+    font-weight: 700;
+}
+#bck-share-thgts{
+    background-color: deeppink;
+    border: deeppink;
+}
+/* Main Contact Seciton End */
